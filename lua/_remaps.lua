@@ -5,10 +5,7 @@ vim.o.timeoutlen = 250
 -- Map escape to jk
 vim.keymap.set("i", "jk", "<Esc>")
 
-vim.keymap.set("n", "<F6>", ":set norelativenumber<CR>")
-vim.keymap.set("n", "<F7>", ":set relativenumber<CR>")
-
--- Saving and exit 
+-- save and exit 
 vim.keymap.set("n", "<leader>q", ":wqa!<CR>")
 vim.keymap.set("n", "<leader>sq", ":q<CR>")
 vim.keymap.set("n", "<leader>w", ":w!<CR>")
@@ -34,3 +31,8 @@ vim.keymap.set('n', '<leader>ev', ':vsplit $MYVIMRC<cr>')
 
 -- Mappings  for file maniuplation
 vim.keymap.set('n', '<leader>e', ':edit %%')
+
+-- enable/disable relative line numbers
+vim.keymap.set("n", "<F6>", ":set norelativenumber<CR>")
+vim.keymap.set("n", "<F7>", ":set relativenumber<CR>")
+
