@@ -21,7 +21,7 @@ vim.o.autoread = true
 -- look & feel
 vim.o.title = true
 vim.o.cursorline = true
-vim.o.scrolloff=2
+vim.o.scrolloff=5
 vim.o.autoindent = true
 vim.o.smartindent = true
 vim.o.showmode = true
@@ -38,6 +38,8 @@ vim.o.undofile = true
 vim.o.t_Co=256
 vim.o.splitbelow = true
 vim.o.splitright = true
+vim.o.termguicolors = true
+vim.o.colorcolumn = '100'
 
 vim.o.tabstop = 2
 vim.o.shiftwidth = 2
@@ -46,6 +48,11 @@ vim.o.expandtab = true
 vim.o.wrap = false
 vim.o.textwidth = 100
 vim.o.formatoptions='n'
+
+vim.o.hlsearch = false
+vim.o.incsearch = true
+
+vim.o.updatetime = 50
 
 -- gruvbox colorscheme
 vim.o.background = "dark"

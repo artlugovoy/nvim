@@ -32,6 +32,8 @@ return require('packer').startup(function(use)
     end,
   }
 
+  use { use 'mbbill/undotree' }
+
   use {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v2.x',
@@ -47,6 +49,8 @@ return require('packer').startup(function(use)
       {'L3MON4D3/LuaSnip'},
     }
   }
+
+  use { 'tpope/vim-fugitive' }
 
   use {
     'andymass/vim-matchup',

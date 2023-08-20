@@ -36,3 +36,11 @@ vim.keymap.set('n', '<leader>e', ':edit %%')
 vim.keymap.set("n", "<F6>", ":set norelativenumber<CR>")
 vim.keymap.set("n", "<F7>", ":set relativenumber<CR>")
 
+-- search mappings
+vim.keymap.set('n', '<leader><space>', ':noh<cr>')
+
+-- Enabe vim to read directory specific .vimrc
+vim.o.exrc = true
+
+-- Other
+vim.keymap.set('n', 'J', 'mzJ`z')
