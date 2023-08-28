@@ -12,8 +12,8 @@ require('telescope').setup{
 }
 
 vim.keymap.set('n', '<leader>f', builtin.find_files, {})
-vim.keymap.set('n', '<leader>vg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>vb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>gg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>bb', builtin.buffers, {})
 
 vim.keymap.set('i', '<C-j>', builtin.buffers, {})
 vim.keymap.set('i', '<leader>vb', builtin.buffers, {})
