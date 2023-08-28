@@ -32,7 +32,9 @@ return require('packer').startup(function(use)
     end,
   }
 
-  use { use 'mbbill/undotree' }
+  use { 'mbbill/undotree' }
+
+  use { 'mileszs/ack.vim' }
 
   use {
     'VonHeikemen/lsp-zero.nvim',
