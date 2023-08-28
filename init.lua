@@ -1,4 +1,5 @@
 require('_remaps')
+require('_comment')
 require('_lualine')
 require('_nvim_tree')
 require('_treesitter')
