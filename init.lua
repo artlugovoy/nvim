@@ -5,6 +5,7 @@ require('_nvim_tree')
 require('_treesitter')
 require('_telescope')
 require('_lsp')
+require('_cmp')
 
 -- do not fold files
 vim.o.foldenable = false

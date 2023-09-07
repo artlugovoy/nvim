@@ -7,7 +7,6 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.2',
     -- or                            , branch = '0.1.x',
@@ -55,7 +54,8 @@ return require('packer').startup(function(use)
       -- Autocompletion
       {'hrsh7th/nvim-cmp'},
       {'hrsh7th/cmp-nvim-lsp'},
-      {'L3MON4D3/LuaSnip'},
+      {'hrsh7th/cmp-vsnip'},
+      {'hrsh7th/vim-vsnip'},
     }
   }
 

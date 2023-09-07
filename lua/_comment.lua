@@ -1,6 +1,6 @@
 require('Comment').setup({
   opleader = {
-    line = '<leader>c',
+    line = '<leader>cc',
     block = '<leader>bc',
   }
 })
