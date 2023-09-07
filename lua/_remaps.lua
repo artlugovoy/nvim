@@ -31,7 +31,7 @@ vim.keymap.set('n', '<leader><leader>', '<c-^>')
 vim.keymap.set('n', '<leader>ev', ':vsplit $MYVIMRC<cr>')
 
 -- Mappings  for file maniuplation
-vim.keymap.set('n', '<leader>e', ':edit %%')
+vim.keymap.set('n', '<leader>e', ":edit <C-R>=expand(\'%:h\').\'/\'<CR>")
 
 -- enable/disable relative line numbers
 vim.keymap.set("n", "<F6>", ":set norelativenumber<CR>")
