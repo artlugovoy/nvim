@@ -1,6 +1,6 @@
 -- Map leader to comma
 vim.g.mapleader = ","
-vim.o.timeoutlen = 250
+vim.o.timeoutlen = 400
 
 -- Map escape to jk
 vim.keymap.set("i", "jk", "<Esc>")
@@ -12,6 +12,7 @@ vim.keymap.set("n", "<leader>w", ":w!<CR>")
 vim.keymap.set("n", "<leader><Esc>", ":q!<CR>")
 
 -- splits
+vim.keymap.set("n", "<leader>vv", "<C-w><C-W>")
 vim.keymap.set("n", "<leader>sh", "<C-w>h")
 vim.keymap.set("n", "<leader>sj", "<C-w>j")
 vim.keymap.set("n", "<leader>sk", "<C-w>k")
