@@ -1,6 +1,8 @@
 require('Comment').setup({
-  opleader = {
+  padding = true,
+
+  toggler = {
     line = '<leader>cc',
     block = '<leader>bc',
-  }
+  },
 })
