@@ -18,7 +18,7 @@ vim.keymap.set("n", "<leader>sj", "<C-w>j")
 vim.keymap.set("n", "<leader>sk", "<C-w>k")
 vim.keymap.set("n", "<leader>sl", "<C-w>l")
 
-vim.keymap.set("n", "<leader>vl", ":vs<CR>")
+vim.keymap.set("n", "<leader>ll", ":vs<CR>")
 
 -- buffers
 vim.keymap.set("n", "<leader>d", ":bd<CR>")
@@ -29,6 +29,8 @@ vim.keymap.set('n', '<leader><leader>', '<c-^>')
 
 -- edit configuration init.lua bindings
 vim.keymap.set('n', '<leader>ev', ':vsplit $MYVIMRC<cr>')
+-- source configuration file
+vim.keymap.set('n', '<leader>ss', ':so<CR>')
 
 -- Mappings  for file maniuplation
 vim.keymap.set('n', '<leader>e', ":edit <C-R>=expand(\'%:h\').\'/\'<CR>")
