@@ -43,6 +43,9 @@ vim.keymap.set("n", "<F7>", ":set relativenumber<CR>")
 vim.keymap.set('n', '<leader><space>', ':noh<cr>')
 vim.keymap.set('n', '<leader><space>', ':noh<cr>')
 
+--global search
+vim.keymap.set('n', '<leader>a', ':CtrlSF ')
+
 -- Enabe vim to read directory specific .vimrc
 vim.o.exrc = true
 
