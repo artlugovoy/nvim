@@ -79,5 +79,5 @@ return require('packer').startup(function(use)
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 
-  use { "ellisonleao/gruvbox.nvim" }
+  use { "sainnhe/gruvbox-material" }
 end)
