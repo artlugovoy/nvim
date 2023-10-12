@@ -25,8 +25,6 @@ return require('packer').startup(function(use)
     }
   }
 
-  use { 'github/copilot.vim' }
-
   use {
     'nvim-treesitter/nvim-treesitter',
     run = function()
@@ -62,6 +60,23 @@ return require('packer').startup(function(use)
       {'hrsh7th/cmp-vsnip'},
       {'hrsh7th/vim-vsnip'},
     }
+  }
+
+  use {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup({})
+    end,
+  }
+
+  use {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+    config = function ()
+      require("copilot_cmp").setup()
+    end
   }
 
   use { 'tpope/vim-fugitive' }
