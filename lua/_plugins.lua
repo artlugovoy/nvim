@@ -40,6 +40,22 @@ return require('packer').startup(function(use)
     end
   }
 
+  use {
+    "nvim-neotest/neotest",
+    requires = {
+      "olimorris/neotest-rspec",
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim"
+    },
+    config = function()
+      require("neotest").setup({
+        adapters = {
+          require("neotest-rspec"),
+        }
+      })
+    end
+  }
+
   use { 'mbbill/undotree' }
 
   use { 'dyng/ctrlsf.vim' }
