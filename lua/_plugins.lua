@@ -46,14 +46,7 @@ return require('packer').startup(function(use)
       "olimorris/neotest-rspec",
       "nvim-lua/plenary.nvim",
       "antoinemadec/FixCursorHold.nvim"
-    },
-    config = function()
-      require("neotest").setup({
-        adapters = {
-          require("neotest-rspec"),
-        }
-      })
-    end
+    }
   }
 
   use { 'mbbill/undotree' }

@@ -6,6 +6,7 @@ require('_nvim_tree')
 require('_treesitter')
 require('_telescope')
 require('_lsp')
+require('_neotest')
 require('_cmp')
 
 -- do not fold files
