@@ -60,4 +60,9 @@ vim.o.updatetime = 50
 
 -- gruvbox colorscheme
 vim.o.background = "dark"
+
+vim.g.gruvbox_material_palette = 'mix'
+vim.g.gruvbox_material_background = 'medium'
+
 vim.cmd([[colorscheme gruvbox-material]])
+
