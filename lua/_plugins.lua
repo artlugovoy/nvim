@@ -7,9 +7,18 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  -- Greeter plugin
+  use {
+    'goolord/alpha-nvim',
+    config = function()
+      require'alpha'.setup(require'alpha.themes.startify'.config)
+    end,
+    requires = { 'nvim-tree/nvim-web-devicons' }
+  }
+
 
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.3',
+    'nvim-telescope/telescope.nvim', tag = '0.1.5',
     requires = {
       {'nvim-lua/plenary.nvim'},
       {'nvim-telescope/telescope-ui-select.nvim'}
