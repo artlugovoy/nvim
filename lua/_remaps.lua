@@ -49,5 +49,15 @@ vim.keymap.set('n', '<leader>a', ':CtrlSF ')
 -- Enabe vim to read directory specific .vimrc
 vim.o.exrc = true
 
+-- Copy/Paste system buffer
+vim.keymap.set('n', '<leader>y', '"+y')
+vim.keymap.set('n', '<leader>Y', '"+yg_')
+vim.keymap.set('v', '<leader>y', '"+y')
+
+vim.keymap.set('n', '<leader>p', '"+p')
+vim.keymap.set('n', '<leader>P', '"+P')
+vim.keymap.set('v', '<leader>p', '"+p')
+vim.keymap.set('v', '<leader>P', '"+P')
+
 -- Other
 vim.keymap.set('n', 'J', 'mzJ`z')

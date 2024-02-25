@@ -1,5 +1,3 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
@@ -103,7 +101,6 @@ return require('packer').startup(function(use)
   use {
     'andymass/vim-matchup',
     setup = function()
-      -- may set any options here
       vim.g.matchup_matchparen_offscreen = { method = "popup" }
     end
   }
