@@ -50,6 +50,7 @@ return require('packer').startup(function(use)
   use {
     "nvim-neotest/neotest",
     requires = {
+      "nvim-neotest/nvim-nio",
       "olimorris/neotest-rspec",
       "nvim-lua/plenary.nvim",
       "antoinemadec/FixCursorHold.nvim"
