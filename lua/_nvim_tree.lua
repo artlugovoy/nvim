@@ -10,7 +10,7 @@ require("nvim-tree").setup({
 
   view = {
     side = 'left',
-    width = 45
+    width = 40
   },
 
   renderer = {
@@ -24,4 +24,6 @@ require("nvim-tree").setup({
 
 vim.keymap.set('n', '<leader>nt', ':NvimTreeToggle<CR>')
 vim.keymap.set('n', '<leader>nf', ':NvimTreeFindFile<CR>')
+vim.keymap.set('n', '<leader>ne', ':NvimTreeResize 120<CR>')
+vim.keymap.set('n', '<leader>nee', ':NvimTreeResize 40<CR>')
 
