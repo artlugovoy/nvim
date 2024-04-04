@@ -16,7 +16,10 @@ cmp.setup({
       vim.fn["vsnip#anonymous"](args.body)
     end,
   },
-
+  preselect = 'item',
+  completion = {
+    completeopt = 'menu,menuone,noinsert'
+  },
   mapping = cmp.mapping.preset.insert({
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
