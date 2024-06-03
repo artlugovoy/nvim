@@ -39,7 +39,6 @@ vim.o.laststatus = 2
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.undofile = true
-vim.o.t_Co=256
 vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.termguicolors = true
