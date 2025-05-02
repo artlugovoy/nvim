@@ -9,7 +9,7 @@ return require('packer').startup(function(use)
   use {
     'goolord/alpha-nvim',
     config = function()
-      require'alpha'.setup(require'alpha.themes.startify'.config)
+      require 'alpha'.setup(require 'alpha.themes.startify'.config)
     end,
     requires = { 'nvim-tree/nvim-web-devicons' }
   }
@@ -18,8 +18,8 @@ return require('packer').startup(function(use)
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.8',
     requires = {
-      {'nvim-lua/plenary.nvim'},
-      {'nvim-telescope/telescope-ui-select.nvim'}
+      { 'nvim-lua/plenary.nvim' },
+      { 'nvim-telescope/telescope-ui-select.nvim' }
     }
   }
 
@@ -59,27 +59,24 @@ return require('packer').startup(function(use)
 
   use { 'mbbill/undotree' }
 
-  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = {
+      "markdown" } end, ft = { "markdown" }, })
 
   use { 'dyng/ctrlsf.vim' }
 
   use {
-    'VonHeikemen/lsp-zero.nvim',
-    branch = 'v4.x',
-    requires = {
-      -- LSP Support
-      {'neovim/nvim-lspconfig'},
-      {'williamboman/mason.nvim'},
-      {'williamboman/mason-lspconfig.nvim'},
+    -- LSP Support
+   'williamboman/mason.nvim',
+   'williamboman/mason-lspconfig.nvim',
+   'neovim/nvim-lspconfig',
 
-      -- Autocompletion
-      {'hrsh7th/nvim-cmp'},
-      {'hrsh7th/cmp-nvim-lsp'},
-      {'hrsh7th/cmp-cmdline'},
-      {'hrsh7th/cmp-vsnip'},
-      {'hrsh7th/vim-vsnip'},
-      {'kitagry/vs-snippets'}
-    }
+    -- Autocompletion
+   'hrsh7th/nvim-cmp',
+   'hrsh7th/cmp-nvim-lsp',
+   'hrsh7th/cmp-cmdline',
+   'hrsh7th/cmp-vsnip',
+   'hrsh7th/vim-vsnip',
+   'kitagry/vs-snippets'
   }
 
   use {
@@ -94,7 +91,7 @@ return require('packer').startup(function(use)
   use {
     "zbirenbaum/copilot-cmp",
     after = { "copilot.lua" },
-    config = function ()
+    config = function()
       require("copilot_cmp").setup()
     end
   }
