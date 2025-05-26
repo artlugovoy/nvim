@@ -6,6 +6,7 @@ require('_nvim_tree')
 require('_treesitter')
 require('_telescope')
 require('_lsp')
+require('_lsp_endhints')
 require('_neotest')
 require('_cmp')
 
@@ -64,4 +65,3 @@ vim.g.gruvbox_material_palette = 'mix'
 vim.g.gruvbox_material_background = 'medium'
 
 vim.cmd([[colorscheme gruvbox-material]])
-

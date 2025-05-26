@@ -80,6 +80,13 @@ return require('packer').startup(function(use)
   }
 
   use {
+    "chrisgrieser/nvim-lsp-endhints",
+    config = function()
+      require("lsp-endhints").setup() -- required, even if empty
+    end,
+  }
+
+  use {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
     event = "InsertEnter",

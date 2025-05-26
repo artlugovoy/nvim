@@ -61,3 +61,11 @@ vim.keymap.set('v', '<leader>P', '"+P')
 
 -- Other
 vim.keymap.set('n', 'J', 'mzJ`z')
+
+vim.keymap.set('n', '<leader>tt', function()
+  vim.diagnostic.config({ virtual_text = true })
+end)
+
+vim.keymap.set('n', '<leader>tr', function()
+  vim.diagnostic.config({ virtual_text = false })
+end)
