@@ -103,6 +103,14 @@ return require('packer').startup(function(use)
     end
   }
 
+  use {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    requires = {
+      'github/copilot.vim',
+      'nvim-lua/plenary.nvim'
+    },
+  }
+
   use { 'tpope/vim-fugitive' }
   use { 'christoomey/vim-conflicted' }
 
