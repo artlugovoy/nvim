@@ -9,6 +9,7 @@ require('_lsp')
 require('_lsp_endhints')
 require('_neotest')
 require('_copilot_chat')
+require('_avante')
 require('_cmp')
 
 -- do not fold files

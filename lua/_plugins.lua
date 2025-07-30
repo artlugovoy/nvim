@@ -76,7 +76,18 @@ return require('packer').startup(function(use)
    'hrsh7th/cmp-cmdline',
    'hrsh7th/cmp-vsnip',
    'hrsh7th/vim-vsnip',
-   'kitagry/vs-snippets'
+   'kitagry/vs-snippets',
+
+    -- Avante required plugins
+    'nvim-lua/plenary.nvim',
+    'MunifTanjim/nui.nvim',
+    'MeanderingProgrammer/render-markdown.nvim',
+
+    -- Optional dependencies
+    'nvim-tree/nvim-web-devicons',
+    'HakonHarnes/img-clip.nvim',
+    'stevearc/dressing.nvim',
+    'folke/snacks.nvim',
   }
 
   use {
@@ -96,6 +107,14 @@ return require('packer').startup(function(use)
   }
 
   use {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    requires = {
+      'github/copilot.vim',
+      'nvim-lua/plenary.nvim'
+    }
+  }
+
+  use {
     "zbirenbaum/copilot-cmp",
     after = { "copilot.lua" },
     config = function()
@@ -103,12 +122,14 @@ return require('packer').startup(function(use)
     end
   }
 
+  -- Avante.nvim with build process
   use {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    requires = {
-      'github/copilot.vim',
-      'nvim-lua/plenary.nvim'
-    },
+    'yetone/avante.nvim',
+    branch = 'main',
+    run = 'make',
+    config = function()
+      require('avante').setup()
+    end
   }
 
   use { 'tpope/vim-fugitive' }
