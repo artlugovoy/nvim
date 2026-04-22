@@ -2,49 +2,15 @@ require("avante").setup {
   provider = "claude",
   mode = "agentic",
   auto_suggestions_provider = "claude",
+  input = {
+    provider = "dressing",
+  },
   providers = {
     claude = {
-      endpoint = "https://api.anthropic.com",
-      model = "claude-sonnet-4-20250514",
+      cli_path = "/usr/bin/claude",
       extra_request_body = {
         temperature = 0.75,
         max_tokens = 4096,
-      },
-      moonshot = {
-        endpoint = "https://api.moonshot.ai/v1",
-        model = "kimi-k2-0905-preview",
-        timeout = 30000, -- Timeout in milliseconds
-        extra_request_body = {
-          temperature = 0.75,
-          max_tokens = 32768,
-        },
-      },
-    },
-  },
-  {
-    acp_providers = {
-      ["gemini-cli"] = {
-        command = "gemini",
-        args = { "--experimental-acp" },
-        env = {
-          NODE_NO_WARNINGS = "1",
-          GEMINI_API_KEY = os.getenv("GEMINI_API_KEY"),
-        },
-      },
-      ["claude-code"] = {
-        command = "npx",
-        args = { "@zed-industries/claude-code-acp" },
-        env = {
-          NODE_NO_WARNINGS = "1",
-          ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY"),
-        },
-      },
-      ["kimi-cli"] = {
-        command = "kimi-cli",
-        env = {
-          NODE_NO_WARNINGS = "1",
-          OPENAI_API_KEY = os.getenv("KIMI_API_KEY"),
-        },
       },
     },
   },

@@ -22,6 +22,13 @@ require('telescope').setup{
         mirror = false,
       }
     }
+  },
+  extensions = {
+    ["ui-select"] = {
+      require("telescope.themes").get_dropdown {
+        -- even more opts
+      }
+    }
   }
 }
 

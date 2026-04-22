@@ -16,7 +16,7 @@ return require('packer').startup(function(use)
 
 
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.8',
+    'nvim-telescope/telescope.nvim', tag = 'v0.2.1',
     requires = {
       { 'nvim-lua/plenary.nvim' },
       { 'nvim-telescope/telescope-ui-select.nvim' }
@@ -70,13 +70,16 @@ return require('packer').startup(function(use)
    'williamboman/mason-lspconfig.nvim',
    'neovim/nvim-lspconfig',
 
-    -- Autocompletion
-   'hrsh7th/nvim-cmp',
-   'hrsh7th/cmp-nvim-lsp',
-   'hrsh7th/cmp-cmdline',
-   'hrsh7th/cmp-vsnip',
-   'hrsh7th/vim-vsnip',
-   'kitagry/vs-snippets',
+    -- Autocompletion with blink.cmp v2
+    'saghen/blink.lib',
+    {
+      'saghen/blink.cmp',
+      build = function()
+        require('blink.cmp').build():wait(60000)
+      end,
+    },
+    'hrsh7th/vim-vsnip',
+    'kitagry/vs-snippets',
 
     -- Avante required plugins
     'nvim-lua/plenary.nvim',
@@ -115,11 +118,8 @@ return require('packer').startup(function(use)
   }
 
   use {
-    "zbirenbaum/copilot-cmp",
+    "giuxtaposition/blink-cmp-copilot",
     after = { "copilot.lua" },
-    config = function()
-      require("copilot_cmp").setup()
-    end
   }
 
   -- Avante.nvim with build process
