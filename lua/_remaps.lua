@@ -1,6 +1,4 @@
--- Map leader to comma
-vim.g.mapleader = ","
-vim.o.timeoutlen = 400
+-- Leader key is set in init.lua before plugins load
 
 -- Map escape to jk
 vim.keymap.set("i", "jk", "<Esc>")

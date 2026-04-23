@@ -1,5 +1,3 @@
-local builtin = require('telescope.builtin')
-
 require('telescope').setup{
   defaults = {
     mappings = {
@@ -21,6 +19,10 @@ require('telescope').setup{
         vertical = { width = 0.2 },
         mirror = false,
       }
+    },
+    -- Disable treesitter highlighting in previews to avoid query errors
+    preview = {
+      treesitter = false
     }
   },
   extensions = {
@@ -34,6 +36,8 @@ require('telescope').setup{
 
 require("telescope").load_extension("ui-select")
 
+-- Set up keymaps after telescope is loaded
+local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>f', builtin.find_files, {})
 vim.keymap.set('n', '<leader>gg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>bb', builtin.buffers, {})

@@ -1,17 +1,15 @@
+-- Set leader key FIRST (before plugins load)
+vim.g.mapleader = ","
+vim.o.timeoutlen = 400
+
+-- Setup lazy.nvim (this will load plugins)
+require('lazy-plugins')
+
+-- Load non-plugin configurations (keymaps, etc.)
 require('_remaps')
-require('_comment')
-require('_fugitive')
-require('_lualine')
-require('_nvim_tree')
-require('_treesitter')
-require('_telescope')
-require('_lsp')
-require('_lsp_endhints')
-require('_neotest')
-require('_dressing')
---require('_avante')
-require('_copilot_chat')
-require('_cmp')
+
+-- Plugin configurations are now handled in lazy-plugins.lua or loaded on demand
+-- These will be loaded after plugins are available via lazy.nvim's config functions
 
 -- do not fold files
 vim.o.foldenable = false
